@@ -33,7 +33,7 @@ The workflow in `.github/workflows/deploy-pages.yml` builds and checks the site 
 
 - `/`: everyone, grouped into active and previously active participants.
 - `/stories/`: people with stories; `/stories/<id>/` displays each article, and `/stories/about/` explains the series.
-- `/stars/`: all Stars, with annual directories at `/stars/<year>/` and background at `/stars/about/`.
+- `/stars/`: all Stars, with annual directories at `/stars/<year>/`, a page for each card at `/stars/<year>/cards/<github-username>/` and background at `/stars/about/`.
 - `/wg/`: working-group participants and the TSC, with directories for each group and `/wg/tsc/` for current and emeritus TSC members.
 - `/ambassadors/`: current and emeritus ambassadors.
 - `/speakers/`: GraphQLConf speakers, with event directories at `/speakers/graphqlconf-<year>/`.
@@ -101,7 +101,7 @@ Write the article in Markdown below the frontmatter. `github`, `links` and `hero
 
 ### Stars cards and conference talks
 
-Place optional Stars contribution cards at `public/stars/<year>/<github-username>.png`. Profiles show cards only for the matching year. Historical Stars `tsc` flags describe that class, not the current TSC roster.
+Place optional Stars contribution cards at `public/stars/<year>/<github-username>.png`. Each card gets its own page at `/stars/<year>/cards/<github-username>/`, and profiles show cards only for the matching year. Historical Stars `tsc` flags describe that class, not the current TSC roster.
 
 Conference imports exclude cancelled events and events without speakers. Talks display video embeds only when a supported YouTube URL is available.
 

@@ -7,7 +7,7 @@ import {
   type CSSProperties,
 } from "react";
 import type { Article, DirectoryPage, Entry, Mode } from "../lib/directory";
-import { memberships } from "../lib/directory";
+import { cardHrefFor, memberships } from "../lib/directory";
 import { matchesSearch } from "../lib/search";
 import styles from "./PeopleDirectory.module.css";
 import starCardStyles from "./star-card.module.css";
@@ -243,6 +243,10 @@ export default function PeopleDirectory({
           .map((m) => [m.page, m]),
       ).values(),
     ];
+    const starCardImage = /^stars\/\d{4}$/.test(page.slug)
+      ? p.memberships.find((m) => m.page === page.slug)?.image
+      : undefined;
+    const starCardHref = starCardImage ? cardHrefFor(starCardImage) : undefined;
     const tscTerm =
       page.slug === "wg/tsc" && mode === "list"
         ? p.memberships.find((m) => m.page === "wg/tsc")
@@ -250,14 +254,14 @@ export default function PeopleDirectory({
     return (
       <li key={p.slug} id={p.anchor} className={styles.person}>
         <a
-          href={profile}
+          href={starCardHref ?? profile}
           className={`${styles.avatar} ${p.currentTsc ? styles.gold : p.currentAmbassador ? styles.ambassador : ""}`}
           aria-label={
             isStars ? `View star card for ${p.name}` : `Meet ${p.name}`
           }
-          aria-haspopup={isStars ? "dialog" : undefined}
+          aria-haspopup={isStars && !starCardHref ? "dialog" : undefined}
           onClick={
-            isStars
+            isStars && !starCardHref
               ? (event) => {
                   if (
                     event.metaKey ||

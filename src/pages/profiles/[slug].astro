@@ -13,6 +13,7 @@ import {
   isCurrentTsc,
   isCurrentAmbassador,
   transitionName,
+  cardHrefFor,
 } from "../../lib/directory";
 import shared from "../../styles/shared.module.css";
 import styles from "./profile.module.css";
@@ -261,7 +262,7 @@ const profileLinks = [
           {appearances
             .filter((m) => m.image)
             .map((m) => (
-              <a href={m.image}>
+              <a href={cardHrefFor(m.image!)}>
                 <img
                   src={m.image}
                   class={starCardStyles.card}

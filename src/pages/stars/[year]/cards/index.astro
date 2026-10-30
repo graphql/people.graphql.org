@@ -1,0 +1,38 @@
+---
+import Layout from "../../../../layouts/Layout.astro";
+import { pages, montageFor } from "../../../../lib/directory";
+import shared from "../../../../styles/shared.module.css";
+
+export function getStaticPaths() {
+  return pages.flatMap((page) => {
+    const year = page.slug.match(/^stars\/(\d{4})$/)?.[1];
+    return year ? [{ params: { year } }] : [];
+  });
+}
+
+const { year } = Astro.params;
+const image = montageFor(`stars/${year}`)!;
+---
+
+<Layout
+  title={`GraphQL Stars ${year} · Cards`}
+  description={`The GraphQL Stars ${year} cards montage.`}
+  image={image}
+>
+  <article class:list={[shared.wrap, shared.pageIntro]}>
+    <a class={shared.back} href={`/stars/${year}/`}>← GraphQL Stars {year}</a>
+    <h1>GraphQL Stars {year} cards</h1>
+    <a href={image}>
+      <img src={image} alt={`Montage of the GraphQL Stars ${year} cards`} />
+    </a>
+  </article>
+</Layout>
+
+<style>
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+  }
+</style>

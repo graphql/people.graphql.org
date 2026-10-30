@@ -1,0 +1,71 @@
+---
+import SocialLink from "../../../../components/SocialLink.astro";
+import { socialIcons } from "../../../../lib/social-links";
+import Layout from "../../../../layouts/Layout.astro";
+import {
+  people,
+  memberships,
+  hrefFor,
+} from "../../../../lib/directory";
+import shared from "../../../../styles/shared.module.css";
+import styles from "./card.module.css";
+import starCardStyles from "../../../../components/star-card.module.css";
+export function getStaticPaths() {
+  return memberships.flatMap((m) => {
+    const match = m.image?.match(/^\/stars\/(\d{4})\/(.+)\.png$/);
+    if (!match) return [];
+    const [, year, username] = match;
+    return [
+      {
+        params: { year, username },
+        props: { slug: m.person, person: people[m.person], membership: m },
+      },
+    ];
+  });
+}
+const { slug, person, membership } = Astro.props;
+const { year } = Astro.params;
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+---
+
+<Layout
+  title={`${person.name} · GraphQL Star ${year}`}
+  description={`${person.name} is a GraphQL Star, ${membership.label}, recognised for their work across the GraphQL project.`}
+  image={membership.image}
+>
+  <article class:list={[shared.wrap, styles.page]}>
+    <a href={membership.image}>
+      <img
+        src={membership.image}
+        class={starCardStyles.card}
+        alt={`${person.name} · ${membership.label}`}
+      />
+    </a>
+    <div>
+      <h2>
+        GraphQL Star · <a class={styles.classLink} href={hrefFor(membership.page)}>{membership.label}</a>
+      </h2>
+      <h1 class={styles.name}>{person.name}</h1>
+      <ul class={styles.links} aria-label="Card links">
+        <li>
+          <a href={`/profiles/${slug}/`}>View profile ↗</a>
+        </li>
+        <li>
+          <SocialLink
+            url={linkedInShareUrl}
+            label="Share on LinkedIn"
+            text="Share on LinkedIn"
+            icon={socialIcons.linkedin}
+            appearance="profile"
+          />
+        </li>
+        <li>
+          <a href={membership.image} download>
+            Download card
+          </a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</Layout>

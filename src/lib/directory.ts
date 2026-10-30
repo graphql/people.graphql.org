@@ -101,6 +101,8 @@ export const montageFor = (slug: string) => {
     slug === "stars" ? starYears.at(-1) : slug.match(/^stars\/(\d{4})$/)?.[1];
   return year && `/stars/${year}/montage.png`;
 };
+export const cardHrefFor = (image: string) =>
+  image.replace(/^\/stars\/(\d{4})\/(.+)\.png$/, "/stars/$1/cards/$2/");
 export const transitionName = (slug: string) => `person-${slug}`;
 export function isActive(m: Membership, now = new Date()) {
   if (m.emeriti !== undefined) return !m.emeriti;
