@@ -658,6 +658,16 @@
         "speaker:ajhingran"
       ]
     },
+    "anastasiarainmaker": {
+      "name": "Anastasia Finogenova",
+      "githubUsername": "anastasiarainmaker",
+      "location": "Texas, USA",
+      "organization": "Meta Platforms",
+      "sourceIds": [
+        "github:anastasiarainmaker"
+      ],
+      "avatarUrl": "/avatars/anastasiarainmaker.png"
+    },
     "andimarek": {
       "name": "Andreas Marek",
       "githubUsername": "andimarek",
@@ -2200,6 +2210,16 @@
       "location": "San Francisco, CA, US",
       "organization": "GraphQL Foundation"
     },
+    "leifhanack": {
+      "name": "Leif Hanack",
+      "githubUsername": "leifhanack",
+      "location": "Aptos, CA, US",
+      "organization": "feddi",
+      "sourceIds": [
+        "github:leifhanack"
+      ],
+      "avatarUrl": "/avatars/leifhanack.png"
+    },
     "lerenzo-malcom": {
       "name": "LeRenzo Malcom",
       "avatarUrl": "/avatars/lerenzo-malcom.png",
@@ -2492,7 +2512,8 @@
       "location": "Atlanta, GA, US",
       "sourceIds": [
         "github:miqui"
-      ]
+      ],
+      "organization": "adapt.com"
     },
     "mjmahone": {
       "name": "Matt Mahoney",
@@ -5130,8 +5151,8 @@
       "person": "benjie",
       "page": "wg/spec",
       "label": "GraphQL Specification WG",
-      "count": 71,
-      "lastActive": "2026-09-17"
+      "count": 72,
+      "lastActive": "2026-10-15"
     },
     {
       "person": "bignimbus",
@@ -5202,6 +5223,13 @@
       "label": "GraphQL Specification WG",
       "count": 1,
       "lastActive": "2024-03-07"
+    },
+    {
+      "person": "daleseo",
+      "page": "wg/spec",
+      "label": "GraphQL Specification WG",
+      "count": 1,
+      "lastActive": "2026-11-05"
     },
     {
       "person": "dariuszkuc",
@@ -5410,8 +5438,15 @@
       "person": "leebyron",
       "page": "wg/spec",
       "label": "GraphQL Specification WG",
-      "count": 76,
-      "lastActive": "2026-11-19"
+      "count": 80,
+      "lastActive": "2027-01-21"
+    },
+    {
+      "person": "leifhanack",
+      "page": "wg/spec",
+      "label": "GraphQL Specification WG",
+      "count": 1,
+      "lastActive": "2026-11-05"
     },
     {
       "person": "lizjakubowski",
@@ -5599,8 +5634,8 @@
       "person": "robrichard",
       "page": "wg/spec",
       "label": "GraphQL Specification WG",
-      "count": 58,
-      "lastActive": "2026-09-17"
+      "count": 59,
+      "lastActive": "2026-10-15"
     },
     {
       "person": "robzhu",
@@ -5778,6 +5813,13 @@
       "lastActive": "2026-02-26"
     },
     {
+      "person": "anastasiarainmaker",
+      "page": "wg/ai",
+      "label": "AI WG",
+      "count": 1,
+      "lastActive": "2026-07-23"
+    },
+    {
       "person": "aprilrd",
       "page": "wg/ai",
       "label": "AI WG",
@@ -5809,8 +5851,8 @@
       "person": "bignimbus",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 9,
-      "lastActive": "2026-09-24"
+      "count": 11,
+      "lastActive": "2026-10-22"
     },
     {
       "person": "cernst11",
@@ -5823,8 +5865,8 @@
       "person": "daleseo",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 9,
-      "lastActive": "2026-09-24"
+      "count": 10,
+      "lastActive": "2026-10-22"
     },
     {
       "person": "egoodwinx",
@@ -5886,15 +5928,15 @@
       "person": "keweiqu",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 7,
-      "lastActive": "2026-05-28"
+      "count": 8,
+      "lastActive": "2026-07-23"
     },
     {
       "person": "magicmark",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 8,
-      "lastActive": "2026-08-27"
+      "count": 10,
+      "lastActive": "2026-10-22"
     },
     {
       "person": "martinbonnin",
@@ -5928,8 +5970,8 @@
       "person": "pascalsenn",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 8,
-      "lastActive": "2026-09-24"
+      "count": 10,
+      "lastActive": "2026-10-22"
     },
     {
       "person": "pinkmarlin",
@@ -5942,7 +5984,7 @@
       "person": "rebello95",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 6,
+      "count": 7,
       "lastActive": "2026-08-27"
     },
     {
@@ -5965,6 +6007,13 @@
       "label": "AI WG",
       "count": 1,
       "lastActive": "2025-10-23"
+    },
+    {
+      "person": "s3wasser",
+      "page": "wg/ai",
+      "label": "AI WG",
+      "count": 1,
+      "lastActive": "2026-07-23"
     },
     {
       "person": "samuelandalon",
@@ -5998,8 +6047,8 @@
       "person": "zkozina",
       "page": "wg/ai",
       "label": "AI WG",
-      "count": 2,
-      "lastActive": "2026-08-27"
+      "count": 3,
+      "lastActive": "2026-10-22"
     },
     {
       "person": "aenimus",
@@ -6670,8 +6719,8 @@
       "person": "benjie",
       "page": "wg/http",
       "label": "GraphQL over HTTP WG",
-      "count": 14,
-      "lastActive": "2026-08-27"
+      "count": 15,
+      "lastActive": "2026-10-29"
     },
     {
       "person": "enisdenjo",
@@ -6721,6 +6770,13 @@
       "label": "GraphQL over HTTP WG",
       "count": 7,
       "lastActive": "2026-08-27"
+    },
+    {
+      "person": "miqui",
+      "page": "wg/http",
+      "label": "GraphQL over HTTP WG",
+      "count": 1,
+      "lastActive": "2026-10-29"
     },
     {
       "person": "mmatsa",

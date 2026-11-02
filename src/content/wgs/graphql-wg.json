@@ -133,8 +133,8 @@
       "name": "Benjie Gillam",
       "org": "Graphile",
       "location": "Chandler's Ford, UK",
-      "count": 71,
-      "lastMeeting": "2026-09-17"
+      "count": 72,
+      "lastMeeting": "2026-10-15"
     },
     {
       "github": "bignimbus",
@@ -215,6 +215,14 @@
       "location": "New York, NY, US",
       "count": 1,
       "lastMeeting": "2024-03-07"
+    },
+    {
+      "github": "DaleSeo",
+      "name": "Dale Seo",
+      "org": "Apollo",
+      "location": "Toronto, ON, CA",
+      "count": 1,
+      "lastMeeting": "2026-11-05"
     },
     {
       "github": "dariuszkuc",
@@ -453,8 +461,16 @@
       "name": "Lee Byron",
       "org": "GraphQL Foundation",
       "location": "San Francisco, CA, US",
-      "count": 76,
-      "lastMeeting": "2026-11-19"
+      "count": 80,
+      "lastMeeting": "2027-01-21"
+    },
+    {
+      "github": "leifhanack",
+      "name": "Leif Hanack",
+      "org": "feddi",
+      "location": "Aptos, CA, US",
+      "count": 1,
+      "lastMeeting": "2026-11-05"
     },
     {
       "github": "lizjakubowski",
@@ -669,8 +685,8 @@
       "name": "Rob Richard",
       "org": "1stDibs",
       "location": "New Jersey, US",
-      "count": 58,
-      "lastMeeting": "2026-09-17"
+      "count": 59,
+      "lastMeeting": "2026-10-15"
     },
     {
       "github": "robzhu",
