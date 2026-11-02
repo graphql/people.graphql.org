@@ -26,7 +26,6 @@
           "url": "https://www.linkedin.com/in/arturczemiel/"
         }
       ],
-      "maintainerProjects": ["GraphQL Zeus", "GraphQL Editor"],
       "graphqlLocals": []
     },
     {
@@ -75,7 +74,6 @@
           "url": "https://x.com/dotansimha"
         }
       ],
-      "maintainerProjects": ["Yoga"],
       "graphqlLocals": []
     },
     {
@@ -108,7 +106,6 @@
           "url": "https://www.youtube.com/@eddeee888"
         }
       ],
-      "maintainerProjects": ["GraphQL Code Gen"],
       "graphqlLocals": []
     },
     {
@@ -139,7 +136,6 @@
           "url": "https://www.meetup.com/amsterdam-graphql-meetup"
         }
       ],
-      "maintainerProjects": ["Python GraphQL", "Strawberry"],
       "graphqlLocals": ["Amsterdam"]
     },
     {
@@ -167,7 +163,6 @@
           "url": "https://www.threads.com/@itamarok"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -204,7 +199,6 @@
           "url": "https://notrab.dev"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -243,7 +237,6 @@
           "url": "https://guild.host/graphql-virtual"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Virtual"]
     },
     {
@@ -278,7 +271,6 @@
           "url": "https://guild.host/london-graphql"
         }
       ],
-      "maintainerProjects": ["Grafast", "PostGraphile"],
       "graphqlLocals": ["London"]
     },
     {
@@ -311,7 +303,6 @@
           "url": "https://jordaneldredge.com/"
         }
       ],
-      "maintainerProjects": ["Grats", "Relay"],
       "graphqlLocals": []
     },
     {
@@ -436,7 +427,6 @@
           "url": "https://www.linkedin.com/in/patrickarminio/"
         }
       ],
-      "maintainerProjects": ["Strawberry"],
       "graphqlLocals": []
     },
     {
@@ -494,7 +484,6 @@
           "url": "https://luma.com/phillygraphql"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Philly"]
     },
     {
@@ -523,7 +512,6 @@
           "url": "http://stephenspalding.com/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -575,7 +563,6 @@
           "url": "https://www.youtube.com/@overstacked_io"
         }
       ],
-      "maintainerProjects": ["GraphQL Network Inspector"],
       "graphqlLocals": []
     },
     {
@@ -606,7 +593,6 @@
           "url": "https://www.meetup.com/amsterdam-graphql-meetup"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Amsterdam"]
     },
     {
@@ -635,7 +621,6 @@
           "url": "https://x.com/spyl94"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -661,7 +646,6 @@
           "url": "https://guild.host/graphql-hyderabad/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Hyderabad"]
     },
     {
@@ -694,7 +678,6 @@
           "url": "https://x.com/derek_kuc"
         }
       ],
-      "maintainerProjects": ["Apollo Federation"],
       "graphqlLocals": []
     },
     {
@@ -723,7 +706,6 @@
           "url": "https://x.com/gilgardosh"
         }
       ],
-      "maintainerProjects": ["Mesh"],
       "graphqlLocals": []
     },
     {
@@ -743,7 +725,6 @@
           "url": "https://www.linkedin.com/in/giuseppeabrignani/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -774,7 +755,6 @@
           "url": "https://guild.host/graphql-hyderabad"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Hyderabad"]
     },
     {
@@ -803,7 +783,6 @@
           "url": "https://x.com/n1rual"
         }
       ],
-      "maintainerProjects": ["Hive"],
       "graphqlLocals": []
     },
     {
@@ -836,7 +815,6 @@
           "url": "https://phryneas.de/"
         }
       ],
-      "maintainerProjects": ["Apollo Client"],
       "graphqlLocals": []
     },
     {
@@ -861,7 +839,6 @@
           "url": "https://www.linkedin.com/in/riginoommen/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -886,7 +863,6 @@
           "url": "https://www.linkedin.com/in/sabrina-wasserman-251045138/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -911,7 +887,6 @@
           "url": "https://www.linkedin.com/in/valentin-cocaud/"
         }
       ],
-      "maintainerProjects": ["Hive Gateway", "Mesh", "Yoga"],
       "graphqlLocals": []
     },
     {
@@ -935,7 +910,6 @@
           "url": "https://medium.com/@akshat111111"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -964,7 +938,6 @@
           "url": "https://heyyayush.hashnode.dev/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -995,7 +968,6 @@
           "url": "https://guild.host/graphql-toronto"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Toronto"]
     },
     {
@@ -1024,7 +996,6 @@
           "url": "https://www.linkedin.com/in/igoncharov/"
         }
       ],
-      "maintainerProjects": ["GraphQL Voyager"],
       "graphqlLocals": []
     },
     {
@@ -1050,7 +1021,6 @@
           "url": "https://www.meetup.com/amsterdam-graphql-meetup"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": ["Amsterdam"]
     },
     {
@@ -1074,7 +1044,6 @@
           "url": "https://graphqlguy.com/blog/"
         }
       ],
-      "maintainerProjects": ["Spring for GraphQL"],
       "graphqlLocals": []
     },
     {
@@ -1111,7 +1080,6 @@
           "url": "https://eeshaans.substack.com/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     },
     {
@@ -1144,7 +1112,6 @@
           "url": "https://www.jeanlucas.me/"
         }
       ],
-      "maintainerProjects": [],
       "graphqlLocals": []
     }
   ]

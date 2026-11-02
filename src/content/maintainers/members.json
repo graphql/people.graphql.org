@@ -1,0 +1,76 @@
+{
+  "members": [
+    {
+      "person": "aexol",
+      "projects": ["GraphQL Editor", "GraphQL Zeus"]
+    },
+    {
+      "person": "benjie",
+      "projects": ["Grafast", "PostGraphile"]
+    },
+    {
+      "person": "dariuszkuc",
+      "projects": ["Apollo Federation"]
+    },
+    {
+      "person": "dimamachina",
+      "projects": ["GraphiQL"]
+    },
+    {
+      "person": "dotansimha",
+      "projects": ["Yoga"]
+    },
+    {
+      "person": "eddeee888",
+      "projects": ["GraphQL Codegen"]
+    },
+    {
+      "person": "egoodwinx",
+      "projects": ["Yoga"]
+    },
+    {
+      "person": "erikwrede",
+      "projects": ["Python GraphQL", "Strawberry"]
+    },
+    {
+      "person": "ivangoncharov",
+      "projects": ["GraphQL Voyager"]
+    },
+    {
+      "person": "jemgillam",
+      "projects": ["Grafast", "PostGraphile"]
+    },
+    {
+      "person": "captbaritone",
+      "projects": ["Grats", "Relay"]
+    },
+    {
+      "person": "n1ru4l",
+      "projects": ["Hive"]
+    },
+    {
+      "person": "phryneas",
+      "projects": ["Apollo Client"]
+    },
+    {
+      "person": "patrick91",
+      "projects": ["Strawberry"]
+    },
+    {
+      "person": "acao",
+      "projects": ["GraphiQL"]
+    },
+    {
+      "person": "trevor-scheer",
+      "projects": ["GraphiQL"]
+    },
+    {
+      "person": "warren-day",
+      "projects": ["GraphQL Network Inspector"]
+    },
+    {
+      "person": "yaacovcr",
+      "projects": ["GraphQL.js"]
+    }
+  ]
+}

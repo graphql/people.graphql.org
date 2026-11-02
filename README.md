@@ -69,6 +69,14 @@ It creates new person records, preserves existing curated identity fields, fills
 
 **Do not edit `src/data/directory.json` directly:** it is generated. Preserve `sourceIds` when editing people. To resolve duplicate identities, map the source ID to the canonical slug in `src/data/identity-aliases.json`, then run `npm run directory:build`. GitHub usernames match case-insensitively; review suggested speaker matches in the generated `src/data/identity-review.json` before merging.
 
+### Maintainer projects
+
+Edit `src/content/maintainers/members.json` to record maintainer projects. Each entry has a `person` matching a filename in `src/content/people/` (without `.json`) and a `projects` array. These projects appear on profiles alongside the working groups they attend or Locals they organize.
+
+Project details live in `src/content/maintainers/projects.json`, keyed by the exact project names used in `members.json`. Each project has a `url` and a one-line `description`; add a project here before referencing it in a member's list. Profile cards show “[Project] Maintainer” as a linked title, with the project description below. Project names also link to these URLs in the Ambassadors directory's list view.
+
+Use optional `name` for styled project names, for example `[{ "text": "Gra" }, { "text": "fast", "italic": true }]`. Profiles and ambassador lists share this formatting; projects without `name` use their catalog name.
+
 ### Refreshing sources and portraits
 
 These commands access the network:

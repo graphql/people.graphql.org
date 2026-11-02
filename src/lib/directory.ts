@@ -1,3 +1,5 @@
+import maintainerData from "../content/maintainers/members.json" with { type: "json" };
+import projectData from "../content/maintainers/projects.json" with { type: "json" };
 import localGroups from "../content/locals/groups.json" with { type: "json" };
 import raw from "../data/directory.json" with { type: "json" };
 export interface Person {
@@ -34,7 +36,6 @@ export interface Membership {
   interests?: string[];
   about?: string;
   aboutYear?: number;
-  maintainerProjects?: string[];
   graphqlLocals?: string[];
   links?: { label: string; url: string }[];
   image?: string;
@@ -72,6 +73,22 @@ const data = raw as {
 export const pages = data.pages;
 export const people = data.people;
 export const memberships = data.memberships;
+export interface ProjectNamePart {
+  text: string;
+  italic?: boolean;
+}
+const maintainerProjects: Record<string, {
+  url: string;
+  description: string;
+  name?: ProjectNamePart[];
+}> = projectData;
+export const maintainerProjectsForPerson = (slug: string) =>
+  (maintainerData.members.find((member) => member.person === slug)?.projects ?? [])
+    .map((name) => {
+      const project = maintainerProjects[name];
+      if (!project) throw new Error(`Unknown maintainer project: ${name}`);
+      return { ...project, name: project.name ?? [{ text: name }] };
+    });
 export const locals = localGroups;
 export const localsForPerson = (slug: string) =>
   locals.filter((local) =>

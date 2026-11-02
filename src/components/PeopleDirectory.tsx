@@ -1,4 +1,6 @@
 import Avatar from "./Avatar";
+import ProjectName from "./ProjectName";
+import type { ProjectNamePart } from "../lib/directory";
 import {
   useEffect,
   useState,
@@ -7,7 +9,11 @@ import {
   type CSSProperties,
 } from "react";
 import type { Article, DirectoryPage, Entry, Mode } from "../lib/directory";
-import { cardHrefFor, memberships } from "../lib/directory";
+import {
+  cardHrefFor,
+  memberships,
+  maintainerProjectsForPerson,
+} from "../lib/directory";
 import { matchesSearch } from "../lib/search";
 import styles from "./PeopleDirectory.module.css";
 import starCardStyles from "./star-card.module.css";
@@ -186,7 +192,7 @@ export default function PeopleDirectory({
             </div>
             <p>{a.description}</p>
             <a className={styles.profileLink} href={a.href}>
-              Read the story <span aria-hidden="true">↗</span>
+              Read the story
             </a>
           </div>
         </div>
@@ -205,10 +211,16 @@ export default function PeopleDirectory({
           <a href={story.href}>Featured story: {story.title}</a>
         </h4>
       ));
-    const ambassadorRoles = [
-      ...p.localNames.map((local) => `${local} organizer`),
-      ...(ambassador?.maintainerProjects ?? []).map(
-        (project) => `${project} maintainer`,
+    const ambassadorRoles: { label: string; url?: string; name?: ProjectNamePart[] }[] = [
+      ...p.localNames.map((local) => ({
+        label: `${local} organizer`,
+      })),
+      ...maintainerProjectsForPerson(p.slug).map(
+        (project) => ({
+          label: project.name.map((part) => part.text).join(""),
+          url: project.url,
+          name: project.name,
+        }),
       ),
     ];
     const meetings = p.count
@@ -325,7 +337,7 @@ export default function PeopleDirectory({
                       {m.emeriti ? " (during term)" : ""}
                     </span>
                   ))}
-                <a href={profile}>View profile ↗</a>
+                <a href={profile}>View profile</a>
               </div>
               {featuredStories}
               {page.slug === "wg" && (
@@ -358,7 +370,22 @@ export default function PeopleDirectory({
                       aria-label="Community roles"
                     >
                       {ambassadorRoles.map((role) => (
-                        <li key={role}>{role}</li>
+                        <li key={role.label}>
+                          {role.url ? (
+                            <>
+                              <a
+                                href={role.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <ProjectName name={role.name ?? role.label} />
+                              </a>{" "}
+                              maintainer
+                            </>
+                          ) : (
+                            role.label
+                          )}
+                        </li>
                       ))}
                     </ul>
                   )}
@@ -401,12 +428,12 @@ export default function PeopleDirectory({
                 .map((t) => (
                   <p className={styles.talk} key={t.id}>
                     <a href={`${profile}#talk-${t.id}`}>
-                      {t.title} <span aria-hidden="true">↗</span>
+                      {t.title}
                     </a>
                   </p>
                 ))}
               <a className={styles.profileLink} href={profile}>
-                View profile <span aria-hidden="true">↗</span>
+                View profile
               </a>
             </>
           )}

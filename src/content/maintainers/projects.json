@@ -1,0 +1,79 @@
+{
+  "Apollo Client": {
+    "url": "https://www.apollographql.com/docs/react",
+    "description": "A comprehensive GraphQL state management library for JavaScript."
+  },
+  "Apollo Federation": {
+    "url": "https://www.apollographql.com/docs/graphos/schema-design/federated-schemas/federation",
+    "description": "Declaratively combine multiple APIs into a single federated GraphQL API."
+  },
+  "Grafast": {
+    "name": [{ "text": "Gra" }, { "text": "fast", "italic": true }],
+    "url": "https://grafast.org/",
+    "description": "A next generation planning and execution engine for GraphQL."
+  },
+  "GraphiQL": {
+    "url": "https://github.com/graphql/graphiql",
+    "description": "An interactive editor for exploring GraphQL APIs and writing queries."
+  },
+  "GraphQL Codegen": {
+    "url": "https://the-guild.dev/graphql/codegen",
+    "description": "Generates types and code from GraphQL schemas and operations."
+  },
+  "GraphQL Editor": {
+    "url": "https://graphqleditor.com/",
+    "description": "A Graph based system for reading and designing the GraphQL schema."
+  },
+  "GraphQL.js": {
+    "url": "https://github.com/graphql/graphql-js",
+    "description": "The reference implementation of GraphQL for JavaScript."
+  },
+  "GraphQL Network Inspector": {
+    "url": "https://github.com/warrenday/graphql-network-inspector",
+    "description": "A better network inspector for viewing and debugging GraphQL requests."
+  },
+  "GraphQL Voyager": {
+    "url": "https://github.com/APIs-guru/graphql-voyager",
+    "description": "Represent any GraphQL API as an interactive graph."
+  },
+  "GraphQL Zeus": {
+    "url": "https://zeus.aexol.com/",
+    "description": "TypeScript-first GraphQL client with complete type safety."
+  },
+  "Grats": {
+    "url": "https://grats.capt.dev/",
+    "description": "Extracts an executable GraphQL schema from your generic TypeScript resolver code."
+  },
+  "Hive": {
+    "url": "https://the-guild.dev/graphql/hive",
+    "description": "An open source GraphQL federation platform."
+  },
+  "Hive Gateway": {
+    "url": "https://the-guild.dev/graphql/hive/docs/gateway",
+    "description": "An open source GraphQL gateway for federated schemas."
+  },
+  "Mesh": {
+    "url": "https://the-guild.dev/graphql/mesh",
+    "description": "Combines APIs and data sources into a unified GraphQL API."
+  },
+  "PostGraphile": {
+    "url": "https://postgraphile.org/",
+    "description": "Extensible high-performance GraphQL APIs backed primarily by PostgreSQL."
+  },
+  "Python GraphQL": {
+    "url": "https://github.com/graphql-python",
+    "description": "A collection of libraries for building and using GraphQL APIs in Python."
+  },
+  "Relay": {
+    "url": "https://relay.dev/",
+    "description": "A GraphQL client for managing data fetching and caching in React applications."
+  },
+  "Strawberry": {
+    "url": "https://strawberry.rocks/",
+    "description": "A Python library for building GraphQL APIs using type hints."
+  },
+  "Yoga": {
+    "url": "https://the-guild.dev/graphql/yoga-server",
+    "description": "A GraphQL server focused on easy setup and extensibility across JavaScript runtimes."
+  }
+}
