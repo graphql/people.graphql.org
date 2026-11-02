@@ -216,7 +216,6 @@ for (const m of (await read("src/content/ambassadors/members.json")).members) {
     cohort: m.cohort,
     term: m.term,
     interests: m.askMeAbout,
-    maintainerProjects: m.maintainerProjects ?? [],
     graphqlLocals: m.graphqlLocals ?? [],
     links: m.links,
   });

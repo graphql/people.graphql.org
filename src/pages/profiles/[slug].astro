@@ -1,11 +1,13 @@
 ---
 import SocialLink from "../../components/SocialLink.astro";
+import ProjectName from "../../components/ProjectName";
 import { socialIcons } from "../../lib/social-links";
 import Avatar from "../../components/Avatar";
 import Layout from "../../layouts/Layout.astro";
 import {
   people,
   localsForPerson,
+  maintainerProjectsForPerson,
   memberships,
   pageFor,
   hrefFor,
@@ -30,9 +32,7 @@ const groups = [...new Set(appearances.map((m) => m.page))].filter(
   (page) => !page.startsWith("stars/") && !page.startsWith("speakers/"),
 );
 const localGroups = localsForPerson(slug);
-const projects = [
-  ...new Set(appearances.flatMap((m) => m.maintainerProjects ?? [])),
-];
+const projects = maintainerProjectsForPerson(slug);
 const articles = appearances.flatMap((m) => (m.article ? [m.article] : []));
 const talks = appearances.filter((m) => m.talk);
 const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
@@ -197,7 +197,6 @@ const profileLinks = [
                         : "GraphQL Ambassador Emeritus"
                       : pageFor(page).title}
                   </span>
-                  <span aria-hidden="true">↗</span>
                 </a>
                 {isAmbassador ? (
                   <p>
@@ -248,8 +247,13 @@ const profileLinks = [
           ))}
           {projects.map((project) => (
             <li>
-              <h3 class={styles.tileTitle}>{project}</h3>
-              <p>Maintainer</p>
+              <a href={project.url} target="_blank" rel="noopener noreferrer">
+                <span>
+                  <ProjectName name={project.name} /> Maintainer
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>{project.description}</p>
             </li>
           ))}
         </ul>
@@ -294,7 +298,7 @@ const profileLinks = [
             <div>
               <h3>{a.title}</h3>
               <p>{a.description}</p>
-              <span>Read the story ↗</span>
+              <span>Read the story</span>
             </div>
           </a>
         ))}
@@ -306,7 +310,7 @@ const profileLinks = [
         {talks.map((m) => (
           <article id={`talk-${m.talk!.id}`} class={styles.talk}>
             <a class={styles.event} href={`${hrefFor(m.page)}#${anchor}`}>
-              {pageFor(m.page).title} ↗
+              {pageFor(m.page).title}
             </a>
             <h3>{m.talk!.title}</h3>
             {m.talk!.videoId && (

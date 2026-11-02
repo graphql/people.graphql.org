@@ -83,6 +83,9 @@
   font-size: 1.125rem;
   margin-bottom: 12px;
 }
+.appearances a > span[aria-hidden="true"] {
+  color: var(--pink);
+}
 .appearances p {
   font-size: var(--text-small);
   color: var(--muted);
