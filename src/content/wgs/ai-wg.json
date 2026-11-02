@@ -33,6 +33,14 @@
       "lastMeeting": "2026-02-26"
     },
     {
+      "github": "AnastasiaRainMaker",
+      "name": "Anastasia Finogenova",
+      "org": "Meta Platforms",
+      "location": "Texas, USA",
+      "count": 1,
+      "lastMeeting": "2026-07-23"
+    },
+    {
       "github": "aprilrd",
       "name": "Young Min Kim",
       "org": "The Trade Desk",
@@ -69,8 +77,8 @@
       "name": "Jeff Auriemma",
       "org": "Apollo",
       "location": "Monroe, CT, US",
-      "count": 9,
-      "lastMeeting": "2026-09-24"
+      "count": 11,
+      "lastMeeting": "2026-10-22"
     },
     {
       "github": "cernst11",
@@ -85,8 +93,8 @@
       "name": "Dale Seo",
       "org": "Apollo",
       "location": "Toronto, ON, CA",
-      "count": 9,
-      "lastMeeting": "2026-09-24"
+      "count": 10,
+      "lastMeeting": "2026-10-22"
     },
     {
       "github": "egoodwinx",
@@ -155,18 +163,18 @@
     {
       "github": "Keweiqu",
       "name": "Kewei Qu",
-      "org": "Meta",
+      "org": "Meta Platforms",
       "location": "Menlo Park, CA, USA",
-      "count": 7,
-      "lastMeeting": "2026-05-28"
+      "count": 8,
+      "lastMeeting": "2026-07-23"
     },
     {
       "github": "magicmark",
       "name": "Mark Larah",
       "org": "Yelp",
-      "location": "Austin, TX, USA",
-      "count": 8,
-      "lastMeeting": "2026-08-27"
+      "location": "Austin, TX, US",
+      "count": 10,
+      "lastMeeting": "2026-10-22"
     },
     {
       "github": "martinbonnin",
@@ -201,12 +209,12 @@
       "lastMeeting": "2026-08-27"
     },
     {
-      "github": "PascalSenn",
+      "github": "pascalsenn",
       "name": "Pascal Senn",
       "org": "ChilliCream",
       "location": "Zurich, CH",
-      "count": 8,
-      "lastMeeting": "2026-09-24"
+      "count": 10,
+      "lastMeeting": "2026-10-22"
     },
     {
       "github": "pinkmarlin",
@@ -221,7 +229,7 @@
       "name": "Michael Rebello",
       "org": "Airbnb",
       "location": "San Diego, CA, USA",
-      "count": 6,
+      "count": 7,
       "lastMeeting": "2026-08-27"
     },
     {
@@ -247,6 +255,14 @@
       "location": "New York, US",
       "count": 1,
       "lastMeeting": "2025-10-23"
+    },
+    {
+      "github": "s3wasser",
+      "name": "Sabrina Wasserman",
+      "org": "Meta Platforms",
+      "location": "NYC, NY, USA",
+      "count": 1,
+      "lastMeeting": "2026-07-23"
     },
     {
       "github": "samuelAndalon",
@@ -285,8 +301,8 @@
       "name": "Željko Kozina",
       "org": "Chronomill",
       "location": "Dublin, ROI",
-      "count": 2,
-      "lastMeeting": "2026-08-27"
+      "count": 3,
+      "lastMeeting": "2026-10-22"
     }
   ]
 }

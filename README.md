@@ -23,7 +23,16 @@ Open http://localhost:4321. The dev server rebuilds the directory when content, 
 | `npm run directory:build` | Rebuild the directory data from local sources                        |
 | `npm run montages:build`  | Compose each year's Stars cards into one social preview image        |
 
-Both `dev` and `build` rebuild the directory and the Stars montages (`public/stars/<year>/montage.png`, used as the social preview image for Stars directories) first. Builds use local data and do not fetch content from the network.
+### Refresh working-group attendance and GitHub avatars
+
+Run these commands in order to fetch the latest GitHub meeting agendas, register new people, import their avatars and update the directory:
+
+```sh
+npm run wgs:sync
+npm run directory:build
+npm run avatars:refresh:wgs
+npm run directory:build
+```
 
 ## Deploy to GitHub Pages
 
