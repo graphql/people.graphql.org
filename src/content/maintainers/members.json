@@ -1,12 +1,20 @@
 {
   "members": [
     {
+      "person": "acao",
+      "projects": ["GraphiQL"]
+    },
+    {
       "person": "aexol",
       "projects": ["GraphQL Editor", "GraphQL Zeus"]
     },
     {
       "person": "benjie",
       "projects": ["Grafast", "PostGraphile"]
+    },
+    {
+      "person": "captbaritone",
+      "projects": ["Grats", "Relay"]
     },
     {
       "person": "dariuszkuc",
@@ -41,24 +49,16 @@
       "projects": ["Grafast", "PostGraphile"]
     },
     {
-      "person": "captbaritone",
-      "projects": ["Grats", "Relay"]
-    },
-    {
       "person": "n1ru4l",
       "projects": ["Hive"]
-    },
-    {
-      "person": "phryneas",
-      "projects": ["Apollo Client"]
     },
     {
       "person": "patrick91",
       "projects": ["Strawberry"]
     },
     {
-      "person": "acao",
-      "projects": ["GraphiQL"]
+      "person": "phryneas",
+      "projects": ["Apollo Client"]
     },
     {
       "person": "trevor-scheer",
