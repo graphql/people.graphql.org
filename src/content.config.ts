@@ -7,6 +7,7 @@ const stories = defineCollection({
     title: z.string(),
     name: z.string(),
     description: z.string(),
+    shareText: z.string().min(1).optional(),
     sidebar: z
       .object({ role: z.string(), introduction: z.string() })
       .optional(),

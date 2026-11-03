@@ -4,6 +4,7 @@ name: "Eddy Nguyen"
 sidebar:
   role: "Maintainer of GraphQL Code Generator and GraphQL Ambassador"
   introduction: "Through his work with The Guild, Eddy helps shape the tooling that developers rely on to build with GraphQL."
+shareText: "Eddy Nguyen on maintaining GraphQL Codegen, learning in public, and the people behind open source."
 description: "Eddy’s first open-source contribution was a one- or two-line fix to GraphQL Code Generator (Codegen). He now maintains the project, developing ideas with the people who use and contribute to it while sharing the questions, mistakes, and learning that shape his work."
 publishedAt: 2026-10-22
 recordedAt: 2026-08-14

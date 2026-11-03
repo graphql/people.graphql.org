@@ -1,0 +1,94 @@
+---
+import styles from "./SocialLink.module.css";
+
+interface Props {
+  url: string;
+}
+const { url } = Astro.props;
+---
+
+<div data-copy-link>
+  <button
+    class:list={[styles.link, styles.profile, "copy-link"]}
+    type="button"
+    data-url={url}
+    hidden
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <rect x="8" y="8" width="12" height="12" rx="1.5" />
+      <path d="M16 8V4H4v12h4" stroke-linejoin="round" />
+    </svg>
+    <span role="status" aria-live="polite">
+      Copy link
+    </span>
+  </button>
+  <input aria-label="Link to copy" type="url" value={url} readonly hidden />
+</div>
+
+<style>
+  .copy-link {
+    border: 0;
+    background: none;
+    padding-inline: 0;
+    cursor: pointer;
+    text-align: left;
+  }
+  .copy-link svg {
+    flex: 0 0 24px;
+  }
+  .copy-link:hover,
+  .copy-link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .copy-link:focus-visible {
+    outline: 3px solid var(--pink);
+    outline-offset: 5px;
+  }
+  input {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+</style>
+
+<script>
+  for (const container of document.querySelectorAll<HTMLElement>(
+    "[data-copy-link]",
+  )) {
+    const button = container.querySelector<HTMLButtonElement>("button")!;
+    const status = container.querySelector<HTMLElement>("[role=status]")!;
+    const input = container.querySelector<HTMLInputElement>("input")!;
+    let resetTimer: ReturnType<typeof setTimeout>;
+    button.hidden = false;
+    button.addEventListener("click", async () => {
+      clearTimeout(resetTimer);
+      try {
+        await navigator.clipboard.writeText(button.dataset.url!);
+        input.hidden = true;
+        status.textContent = "Link copied";
+        resetTimer = setTimeout(() => {
+          status.textContent = "Copy link";
+        }, 2500);
+      } catch {
+        status.textContent = "Copy the link below";
+        input.hidden = false;
+        input.focus();
+        input.select();
+      }
+    });
+  }
+</script>

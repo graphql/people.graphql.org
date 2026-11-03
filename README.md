@@ -108,6 +108,8 @@ hero:
 
 Write the article in Markdown below the frontmatter. `github`, `links` and `hero` are optional. Put photographs in `public/stories/`; the directory uses portraits, while articles and profile story cards use hero photographs. Optional `sidebar` and `relatedLinks` fields are defined in `src/content.config.ts`; existing stories provide examples.
 
+Articles include LinkedIn and Bluesky sharing links and a copy-link button beneath the author bio. Add optional `shareText` frontmatter for a short, story-specific Bluesky introduction; otherwise the title and interview subject are used. The article URL, `@graphql.org` and `#GraphQL` are appended automatically, and the introduction is shortened if needed to fit Bluesky’s post limit. LinkedIn shares the article preview; readers add their own post text and mentions there. The copy-link button copies the public article URL, with a selectable URL fallback if clipboard access is unavailable. Its overlapping-squares icon is an inline SVG in `src/components/CopyLink.astro`.
+
 ### Stars cards and conference talks
 
 Place optional Stars contribution cards at `public/stars/<year>/<github-username>.png`. Each card gets its own page at `/stars/<year>/cards/<github-username>/`, and profiles show cards only for the matching year. Historical Stars `tsc` flags describe that class, not the current TSC roster.

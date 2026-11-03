@@ -1,5 +1,6 @@
 ---
 import SocialLink from "../../components/SocialLink.astro";
+import CopyLink from "../../components/CopyLink.astro";
 import { socialIcons } from "../../lib/social-links";
 import Avatar from "../../components/Avatar";
 import Layout from "../../layouts/Layout.astro";
@@ -39,7 +40,10 @@ const interests = [...new Set(appearances.flatMap((m) => m.interests ?? []))];
 const bio = appearances.find((m) => m.about);
 const anchor = person.githubUsername ?? slug;
 const cardImage = appearances.findLast((m) => m.image)?.image;
-const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(new URL(Astro.url.pathname, Astro.site).href)}`;
+const profileUrl = new URL(Astro.url.pathname, Astro.site).href;
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(profileUrl)}`;
+const blueskyText = `Discover ${person.name}’s contributions to the GraphQL community on People of GraphQL.\n\n${profileUrl}\n\n@graphql.org #GraphQL`;
+const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(blueskyText)}`;
 const links = [
   ...new Map(
     appearances
@@ -257,7 +261,26 @@ const profileLinks = [
     )}
     {appearances.some((m) => m.image) && (
       <section class={styles.section} aria-labelledby="cards-title">
-        <h2 id="cards-title">Stars contribution cards</h2>
+        <div class={styles.sectionHeading}>
+          <h2 id="cards-title">Stars contribution cards</h2>
+          <nav class={styles.share} aria-label="Share this profile">
+            <SocialLink
+              url={linkedInShareUrl}
+              label="Share on LinkedIn"
+              text="Share on LinkedIn"
+              icon={socialIcons.linkedin}
+              appearance="profile"
+            />
+            <SocialLink
+              url={blueskyShareUrl}
+              label="Share on Bluesky"
+              text="Share on Bluesky"
+              icon={socialIcons.bluesky}
+              appearance="profile"
+            />
+            <CopyLink url={profileUrl} />
+          </nav>
+        </div>
         <div class={styles.cards}>
           {appearances
             .filter((m) => m.image)
@@ -272,15 +295,6 @@ const profileLinks = [
               </a>
             ))}
         </div>
-        <p class={styles.share}>
-          <SocialLink
-            url={linkedInShareUrl}
-            label="Share on LinkedIn"
-            text="Share on LinkedIn"
-            icon={socialIcons.linkedin}
-            appearance="profile"
-          />
-        </p>
       </section>
     )}
     {articles.length > 0 && (

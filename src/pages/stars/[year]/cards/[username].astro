@@ -1,5 +1,6 @@
 ---
 import SocialLink from "../../../../components/SocialLink.astro";
+import CopyLink from "../../../../components/CopyLink.astro";
 import { socialIcons } from "../../../../lib/social-links";
 import Layout from "../../../../layouts/Layout.astro";
 import {
@@ -27,6 +28,8 @@ const { slug, person, membership } = Astro.props;
 const { year } = Astro.params;
 const url = new URL(Astro.url.pathname, Astro.site).href;
 const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+const blueskyText = `Celebrate ${person.name}, a GraphQL Star ${year}, and their contributions to the GraphQL community.\n\n${url}\n\n@graphql.org #GraphQL`;
+const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(blueskyText)}`;
 ---
 
 <Layout
@@ -45,12 +48,10 @@ const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${
     <div>
       <h2>
         GraphQL Star · <a class={styles.classLink} href={hrefFor(membership.page)}>{membership.label}</a>
+        {" "}· <a class={styles.classLink} href={`/profiles/${slug}/`}>View profile</a>
       </h2>
       <h1 class={styles.name}>{person.name}</h1>
       <ul class={styles.links} aria-label="Card links">
-        <li>
-          <a href={`/profiles/${slug}/`}>View profile ↗</a>
-        </li>
         <li>
           <SocialLink
             url={linkedInShareUrl}
@@ -61,11 +62,36 @@ const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${
           />
         </li>
         <li>
-          <a href={membership.image} download>
-            Download card
+          <SocialLink
+            url={blueskyShareUrl}
+            label="Share on Bluesky"
+            text="Share on Bluesky"
+            icon={socialIcons.bluesky}
+            appearance="profile"
+          />
+        </li>
+        <li><CopyLink url={url} /></li>
+        <li>
+          <a class={styles.download} href={membership.image} download>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+            </svg>
+            <span>Download card</span>
           </a>
         </li>
       </ul>
+      <p>Thank you {person.name.trim().split(/\s+/)[0]} for being a GraphQL Star {year}!</p>
     </div>
   </article>
 </Layout>

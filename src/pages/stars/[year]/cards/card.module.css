@@ -29,6 +29,12 @@
   display: flex;
   align-items: center;
 }
+.download {
+  composes: link profile from "../../../../components/SocialLink.module.css";
+}
+.download svg {
+  flex: 0 0 24px;
+}
 @media (max-width: 800px) {
   .page {
     grid-template-columns: 1fr;

@@ -60,9 +60,20 @@
   margin-top: 10px;
   font-size: var(--text-small);
 }
-.section > h2 {
+.section > h2,
+.sectionHeading h2 {
   font-size: 1.875rem;
   margin-bottom: 28px;
+}
+.sectionHeading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-bottom: 28px;
+}
+.sectionHeading h2 {
+  margin: 0;
 }
 .appearances {
   list-style: none;
@@ -138,7 +149,11 @@
   width: 100%;
 }
 .share {
-  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin: 0;
   font-size: var(--text-small);
 }
 @media (min-width: 801px) {
