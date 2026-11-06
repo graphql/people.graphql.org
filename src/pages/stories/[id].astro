@@ -1,6 +1,9 @@
 ---
 import styles from "./article.module.css";
 import StorySocialLinks from "../../components/StorySocialLinks.astro";
+import SocialLink from "../../components/SocialLink.astro";
+import CopyLink from "../../components/CopyLink.astro";
+import { socialIcons } from "../../lib/social-links";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, render } from "astro:content";
 import { people } from "../../lib/directory";
@@ -13,6 +16,23 @@ export async function getStaticPaths() {
 const { story } = Astro.props;
 const links = story.data.links ?? [];
 const firstName = story.data.name.trim().split(/\s+/)[0];
+const storyUrl = new URL(`/stories/${story.id}/`, Astro.site).href;
+const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(storyUrl)}`;
+const shareText =
+  story.data.shareText ??
+  `Read “${story.data.title}” with ${story.data.name} on People of GraphQL.`;
+const shareSuffix = `\n\n${storyUrl}\n\n@graphql.org #GraphQL`;
+// Keep the complete URL and tags within Bluesky's 300-character limit.
+const textBudget = 300 - Array.from(shareSuffix).length;
+const characters = Array.from(shareText);
+const blueskyText =
+  (characters.length > textBudget
+    ? characters
+        .slice(0, textBudget - 1)
+        .join("")
+        .trimEnd() + "…"
+    : shareText) + shareSuffix;
+const blueskyShareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(blueskyText)}`;
 const profile = Object.entries(people).find(
   ([, person]) =>
     story.data.github &&
@@ -93,6 +113,32 @@ const formatDate = (date: Date) => {
             </a>
           )}
         </div>
+        <nav class={styles.storyShare} aria-label="Share this story">
+          <h2 class={styles.storyEyebrow}>Share this story</h2>
+          <ul>
+            <li>
+              <SocialLink
+                url={linkedInShareUrl}
+                label="Share this story on LinkedIn"
+                text="Share on LinkedIn"
+                icon={socialIcons.linkedin}
+                appearance="profile"
+              />
+            </li>
+            <li>
+              <SocialLink
+                url={blueskyShareUrl}
+                label="Share this story on Bluesky"
+                text="Share on Bluesky"
+                icon={socialIcons.bluesky}
+                appearance="profile"
+              />
+            </li>
+            <li>
+              <CopyLink url={storyUrl} />
+            </li>
+          </ul>
+        </nav>
       </aside>
       <Content />
       <p class={styles.storyCredit}>
